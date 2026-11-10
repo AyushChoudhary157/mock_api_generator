@@ -29,8 +29,9 @@ export function createSchemaView({ project, resource, reload }) {
 
   const saveBtn = h('button', { type: 'button', class: 'btn btn-primary', disabled: true, onClick: (e) => save(false, e.currentTarget) }, 'Save schema');
   const regenBtn = h('button', { type: 'button', class: 'btn', onClick: async (e) => {
+    const btn = e.currentTarget; // must be read before any await: it is null afterwards
     if (resource.record_count > 0 && !(await confirmDialog({ title: 'Save and regenerate data?', message: `The ${resource.record_count} existing records in /${resource.name} will be replaced with new ones that match this schema.`, confirmLabel: 'Save & regenerate', danger: true }))) return;
-    save(true, e.currentTarget);
+    save(true, btn);
   } }, icon('refresh', 16), 'Save & regenerate data');
 
   const root = h('div', { class: 'tab-panel schema-view' },
