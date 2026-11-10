@@ -1,0 +1,28 @@
+{
+  "name": "frugal-mock-api-generator",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Free Mock API Generator for FrugalTesting - live REST APIs with realistic fake data.",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "node scripts/dev-server.js",
+    "dev:local": "node scripts/dev-server.js --local",
+    "migrate": "node scripts/migrate.js",
+    "migrate:local": "node scripts/migrate.js --local",
+    "seed": "node scripts/seed.js",
+    "seed:local": "node scripts/seed.js --local",
+    "test": "node --test tests/"
+  },
+  "dependencies": {
+    "@neondatabase/serverless": "^1.0.0",
+    "ajv": "^8.17.1",
+    "ws": "^8.18.0"
+  },
+  "devDependencies": {
+    "@electric-sql/pglite": "^0.3.0",
+    "puppeteer-core": "^24.0.0"
+  }
+}

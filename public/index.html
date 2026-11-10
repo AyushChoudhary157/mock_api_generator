@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Free Mock API Generator – Create a Live REST API in Seconds | FrugalTesting</title>
+  <meta name="description" content="Create a free, public mock REST API in seconds. Define resources, generate realistic fake data, simulate delays and errors, and test with built-in cURL, fetch, axios and Python snippets. No sign-up.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://www.frugaltesting.com/tools/mock-api-generator">
+  <meta name="theme-color" content="#212535">
+  <meta name="mock-api-base" content="">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%232a44d4'/%3E%3Cpath d='M9 11h14M9 16h14M9 21h9' stroke='white' stroke-width='2.5' stroke-linecap='round'/%3E%3C/svg%3E">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Frugal Testing">
+  <meta property="og:title" content="Free Mock API Generator – Live REST API with Fake Data">
+  <meta property="og:description" content="Define resources, generate realistic data and get a live CORS-enabled REST API instantly. Simulate latency and failures. Free, no sign-up.">
+  <meta property="og:url" content="https://www.frugaltesting.com/tools/mock-api-generator">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Free Mock API Generator | FrugalTesting">
+  <meta name="twitter:description" content="Spin up a live mock REST API with realistic data in seconds.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+
+  <script>
+    /* Runs before first paint: restore theme + embed mode so there is no flash. */
+    (function () {
+      try {
+        var t = localStorage.getItem('fm.theme');
+        if (t !== 'light' && t !== 'dark') t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', t);
+      } catch (e) {}
+      if (/[?&]embed=1\b/.test(location.search)) document.documentElement.classList.add('is-embed');
+    })();
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "name": "Mock API Generator",
+        "url": "https://www.frugaltesting.com/tools/mock-api-generator",
+        "applicationCategory": "DeveloperApplication",
+        "operatingSystem": "Any (web browser)",
+        "description": "Free online tool to create a live, public mock REST API with realistic fake data, simulated latency and errors, and a built-in API tester.",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        "publisher": { "@type": "Organization", "name": "Frugal Testing", "url": "https://www.frugaltesting.com" },
+        "featureList": ["Visual schema builder", "Realistic offline data generator", "Full REST CRUD", "Pagination, sorting, filtering and search", "Response delay and random error simulation", "Built-in API tester with cURL, fetch, axios and Python snippets", "JSON and CSV import and export", "AI schema generation"]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.frugaltesting.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://www.frugaltesting.com/tools" },
+          { "@type": "ListItem", "position": 3, "name": "Mock API Generator", "item": "https://www.frugaltesting.com/tools/mock-api-generator" }
+        ]
+      },
+      {
+        "@type": "HowTo",
+        "name": "How to create a mock REST API",
+        "step": [
+          { "@type": "HowToStep", "position": 1, "name": "Create a project", "text": "Name your project. You instantly get a unique public base URL. No sign-up is required." },
+          { "@type": "HowToStep", "position": 2, "name": "Define a resource", "text": "Describe your API with AI, build the schema field by field, or import JSON or CSV. Sample records are generated for you." },
+          { "@type": "HowToStep", "position": 3, "name": "Copy your live endpoint", "text": "Call the endpoint from your app or test script, or use the built-in tester to send requests and copy code snippets." }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          { "@type": "Question", "name": "Is the Mock API Generator really free?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. The free tier includes 5 projects, 10 resources per project, 100 records per resource and 1,000 API requests per project per day." } },
+          { "@type": "Question", "name": "Do I need to create an account?", "acceptedAnswer": { "@type": "Answer", "text": "No. Your projects are linked to a private access key stored in your browser. Back it up from the Access key dialog to manage your projects on another device." } },
+          { "@type": "Question", "name": "Can I call the mock API from my frontend app?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Every endpoint sends open CORS headers, so you can call it from any browser app, Postman, cURL or CI job." } },
+          { "@type": "Question", "name": "How do I simulate slow or failing APIs?", "acceptedAnswer": { "@type": "Answer", "text": "Open the Settings tab to add a response delay, a random error rate with a custom status code, custom success status codes and custom response headers, per resource or for the whole project." } },
+          { "@type": "Question", "name": "How long are my projects kept?", "acceptedAnswer": { "@type": "Answer", "text": "Anonymous projects that receive no activity for 30 days are deleted automatically. Export your schema and data as JSON at any time." } },
+          { "@type": "Question", "name": "Is it safe to store real or sensitive data?", "acceptedAnswer": { "@type": "Answer", "text": "No. Mock endpoints are public: anyone who knows a URL can read and change its data. Only use fake or non-sensitive data." } },
+          { "@type": "Question", "name": "How does the AI feature work?", "acceptedAnswer": { "@type": "Answer", "text": "Describe your API in plain English and the AI proposes resources, fields and relationships. The proposal is validated against a strict JSON schema and you review it before anything is created. Plain CRUD and simple field types always use the built-in generator." } }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#tool">Skip to the tool</a>
+
+  <header class="site-header">
+    <div class="wrap site-header-in">
+      <a class="brand" href="https://www.frugaltesting.com/" aria-label="Frugal Testing home">
+        <img src="https://cdn.prod.website-files.com/64afb26dde3a7b4d2e104692/6a473117cae8a69f99743f2a_Frugal-Logo-1.png" alt="Frugal Testing" width="150" height="40" decoding="async">
+      </a>
+      <nav class="site-nav" aria-label="Main">
+        <a href="https://www.frugaltesting.com/">Home</a>
+        <a href="https://www.frugaltesting.com/tools" aria-current="page">Free Tools</a>
+        <a href="https://www.frugaltesting.com/blog">Blog</a>
+        <a class="nav-cta" href="https://www.frugaltesting.com/contact-us">Contact us</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" aria-labelledby="page-title">
+    <div class="wrap hero-in">
+      <nav class="crumbs" aria-label="Breadcrumb">
+        <a href="https://www.frugaltesting.com/tools">Free Tools</a><span aria-hidden="true">/</span><span aria-current="page">Mock API Generator</span>
+      </nav>
+      <div class="hero-row">
+        <div>
+          <h1 id="page-title">Mock API Generator</h1>
+          <p class="hero-sub">Create a live, public REST API with realistic fake data in seconds. Simulate slow networks and failures, then test it right here.</p>
+          <ul class="badges" aria-label="Highlights">
+            <li>Free</li><li>No sign-up</li><li>CORS enabled</li><li>Full CRUD</li><li>AI schema builder</li>
+          </ul>
+        </div>
+        <button type="button" id="theme-toggle" class="theme-btn" aria-pressed="false">Dark</button>
+      </div>
+    </div>
+  </section>
+
+  <main id="tool" class="wrap tool-wrap" tabindex="-1">
+    <div class="app-panel">
+      <div class="notice notice-info app-notice">
+        <strong>Heads up:</strong> mock endpoints are public. Anyone with the URL can read and change the data, so use fake data only.
+      </div>
+      <button type="button" id="sb-toggle" class="btn sb-toggle" aria-expanded="false" aria-controls="sidebar">Projects &amp; resources</button>
+      <div class="app">
+        <aside id="sidebar" class="sidebar" aria-label="Projects and resources"></aside>
+        <section id="main" class="main" aria-live="polite" aria-label="Workspace">
+          <noscript><div class="main-pad"><p class="notice notice-warn">This tool needs JavaScript. Please enable it to create and manage mock APIs.</p></div></noscript>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <div class="info">
+    <section class="wrap section" aria-labelledby="how-h">
+      <h2 id="how-h">How it works</h2>
+      <p class="section-lead">From idea to a working endpoint in three steps. No installs, no sign-up.</p>
+      <ol class="how-grid">
+        <li class="how-card"><span class="how-num" aria-hidden="true">1</span><h3>Create a project</h3><p>Give it a name and get a unique public base URL: <code>/api/v1/&lt;project-id&gt;/&lt;resource&gt;</code>. Your access key lives in your browser, so there is nothing to register.</p></li>
+        <li class="how-card"><span class="how-num" aria-hidden="true">2</span><h3>Define a resource</h3><p>Describe your API in plain English and let AI draft the schema, build it field by field with drag-to-reorder, or import JSON and CSV. Realistic records are generated instantly.</p></li>
+        <li class="how-card"><span class="how-num" aria-hidden="true">3</span><h3>Copy your endpoint</h3><p>Call it from your app, Postman or CI. Add delays, random errors and custom headers, then use the built-in tester and copy ready-made cURL, fetch, axios or Python code.</p></li>
+      </ol>
+    </section>
+
+    <section class="wrap section" aria-labelledby="ref-h">
+      <h2 id="ref-h">Endpoint reference</h2>
+      <p class="section-lead">Every resource you create gets the full REST surface below.</p>
+      <div class="table-wrap static" role="region" aria-label="Endpoint reference" tabindex="0">
+        <table class="data-table ref-table">
+          <thead><tr><th scope="col">Method</th><th scope="col">Path</th><th scope="col">What it does</th></tr></thead>
+          <tbody>
+            <tr><td><span class="mth">GET</span></td><td><code>/api/v1/{project}/{resource}</code></td><td>List records (paginated, sortable, filterable, searchable)</td></tr>
+            <tr><td><span class="mth">GET</span></td><td><code>/api/v1/{project}/{resource}/{id}</code></td><td>Get one record</td></tr>
+            <tr><td><span class="mth">POST</span></td><td><code>/api/v1/{project}/{resource}</code></td><td>Create a record (JSON body, validated against your schema)</td></tr>
+            <tr><td><span class="mth">PUT</span></td><td><code>/api/v1/{project}/{resource}/{id}</code></td><td>Replace a record</td></tr>
+            <tr><td><span class="mth">PATCH</span></td><td><code>/api/v1/{project}/{resource}/{id}</code></td><td>Update some fields</td></tr>
+            <tr><td><span class="mth">DELETE</span></td><td><code>/api/v1/{project}/{resource}/{id}</code></td><td>Delete a record and return it</td></tr>
+            <tr><td><span class="mth">GET</span></td><td><code>/api/v1/{project}/{parent}/{id}/{child}</code></td><td>One-to-many relation (child has a “ref” field to the parent)</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <h3 class="sub-h">Query parameters</h3>
+      <div class="table-wrap static" role="region" aria-label="Query parameters" tabindex="0">
+        <table class="data-table ref-table">
+          <thead><tr><th scope="col">Parameter</th><th scope="col">Example</th><th scope="col">Description</th></tr></thead>
+          <tbody>
+            <tr><td><code>page</code>, <code>limit</code></td><td><code>?page=2&amp;limit=20</code></td><td>Pagination. Limit is 1–100 (default 10). Totals are in the <code>X-Total-Count</code> header.</td></tr>
+            <tr><td><code>sortBy</code>, <code>order</code></td><td><code>?sortBy=price&amp;order=desc</code></td><td>Sort by any schema field, ascending or descending.</td></tr>
+            <tr><td><em>field</em></td><td><code>?role=admin</code></td><td>Exact-match filter on any field. Repeat it for OR.</td></tr>
+            <tr><td><code>search</code></td><td><code>?search=jane</code></td><td>Case-insensitive search across all fields.</td></tr>
+            <tr><td><code>envelope</code></td><td><code>?envelope=true</code></td><td>Wrap the list in <code>{ data, meta }</code> instead of a bare array.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="wrap section" aria-labelledby="feat-h">
+      <h2 id="feat-h">Built for testers and front-end developers</h2>
+      <ul class="feat-grid">
+        <li><h3>Failure simulation</h3><p>Add response delays up to 5 seconds, a random error rate with the status code you choose, custom success codes and headers.</p></li>
+        <li><h3>Realistic offline data</h3><p>Names, emails, phones, addresses, avatars, UUIDs, dates and more. Deterministic seeds give you the same data every time.</p></li>
+        <li><h3>Relationships</h3><p>Link resources with a “ref” field and get nested routes such as <code>/users/1/posts</code> for free.</p></li>
+        <li><h3>Import and export</h3><p>Paste JSON or upload CSV to infer a schema, and export your schema and data as JSON whenever you like.</p></li>
+        <li><h3>Built-in API tester</h3><p>Send requests, inspect status, timing, headers and body, and copy cURL, fetch, axios and Python snippets.</p></li>
+        <li><h3>AI where it helps</h3><p>Describe your API in words, or ask for domain-specific values like diagnoses or bank products. Basic CRUD stays fast and local.</p></li>
+      </ul>
+    </section>
+
+    <section class="wrap section" aria-labelledby="faq-h">
+      <h2 id="faq-h">Frequently asked questions</h2>
+      <div class="faq">
+        <details><summary>Is the Mock API Generator really free?</summary><p>Yes. The free tier includes 5 projects, 10 resources per project, 100 records per resource and 1,000 API requests per project per day. Limits are shown live in the sidebar.</p></details>
+        <details><summary>Do I need to create an account?</summary><p>No. Your projects are linked to a private access key stored in your browser. Open “Access key &amp; backup” in the sidebar to save it, so you can manage your projects on another device.</p></details>
+        <details><summary>Can I call the mock API from my frontend app?</summary><p>Yes. Every endpoint sends open CORS headers, so you can call it from any browser app, Postman, cURL or a CI job.</p></details>
+        <details><summary>How do I simulate slow or failing APIs?</summary><p>Open the Settings tab. You can add a response delay, a random error rate with a custom status code, custom success status codes and custom headers, for one resource or for the whole project.</p></details>
+        <details><summary>How long are my projects kept?</summary><p>Anonymous projects with no activity for 30 days are deleted automatically. You can export your schema and data as JSON at any time.</p></details>
+        <details><summary>Is it safe to store real or sensitive data?</summary><p>No. Mock endpoints are public: anyone who knows a URL can read and change its data. Only use fake or non-sensitive data.</p></details>
+        <details><summary>How does the AI feature work?</summary><p>Describe your API in plain English and the AI proposes resources, fields and relationships. The proposal is validated against a strict JSON schema and you review it before anything is created. Plain CRUD and simple field types always use the built-in generator, which keeps things fast.</p></details>
+      </div>
+    </section>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap footer-in">
+      <p>&copy; <span id="yr">2026</span> Frugal Testing. Free tools for QA engineers and developers.</p>
+      <nav aria-label="Footer"><a href="https://www.frugaltesting.com/tools">All tools</a><a href="https://www.frugaltesting.com/blog">Blog</a><a href="https://www.frugaltesting.com/contact-us">Contact</a></nav>
+    </div>
+  </footer>
+
+  <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+  <script type="module" src="/js/app.js"></script>
+</body>
+</html>
