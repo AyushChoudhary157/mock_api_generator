@@ -1,7 +1,9 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "rewrites": [
-    { "source": "/tools/mock-api-generator", "destination": "/index.html" }
+    { "source": "/tools/mock-api-generator", "destination": "/index.html" },
+    { "source": "/api/manage/:path*", "destination": "/api/manage/[...path]" },
+    { "source": "/api/v1/:path*", "destination": "/api/v1/[...path]" }
   ],
   "crons": [
     { "path": "/api/cron/cleanup", "schedule": "17 3 * * *" }
